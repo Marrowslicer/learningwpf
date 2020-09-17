@@ -24,5 +24,38 @@ namespace P001_LearningLayout
         {
             InitializeComponent();
         }
+
+        private void OnSelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            if (!(sender is ComboBox cbx) || DrawInkCanvas == null)
+            {
+                return;
+            }
+
+            switch ((cbx.SelectedItem as ComboBoxItem).Content)
+            {
+                case "Ink":
+                    DrawInkCanvas.EditingMode = InkCanvasEditingMode.Ink;
+                    break;
+                case "GestureOnly":
+                    DrawInkCanvas.EditingMode = InkCanvasEditingMode.GestureOnly;
+                    break;
+                case "InkAndGesture":
+                    DrawInkCanvas.EditingMode = InkCanvasEditingMode.InkAndGesture;
+                    break;
+                case "EraseByStroke":
+                    DrawInkCanvas.EditingMode = InkCanvasEditingMode.EraseByStroke;
+                    break;
+                case "EraseByPoint":
+                    DrawInkCanvas.EditingMode = InkCanvasEditingMode.EraseByPoint;
+                    break;
+                case "Select":
+                    DrawInkCanvas.EditingMode = InkCanvasEditingMode.Select;
+                    break;
+                case "None":
+                    DrawInkCanvas.EditingMode = InkCanvasEditingMode.None;
+                    break;
+            }
+        }
     }
 }
