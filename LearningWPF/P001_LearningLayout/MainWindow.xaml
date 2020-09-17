@@ -186,7 +186,7 @@
                     <Rectangle 
                         DockPanel.Dock="Bottom"
                         Height="25"
-                        Margin="5" Fill="Green"
+                        Margin="5" Fill="Yellow"
                         />
                     <Rectangle 
                         DockPanel.Dock="Right"
@@ -195,6 +195,48 @@
                 </DockPanel>
             </TabItem>
             <!--#endregion DockPanel-->
+            
+            <!--#region Canvas-->
+            <TabItem Header="Canvas">
+                <Canvas Margin="5" ClipToBounds="True">
+                    <Rectangle
+                        Canvas.Left="10"
+                        Canvas.Top="10"
+                        Width="50"
+                        Height="50"
+                        Fill="Red"
+                        />
+                    <Rectangle
+                        Canvas.Left="70"
+                        Canvas.Top="70"
+                        Width="50"
+                        Height="50"
+                        Fill="Green"
+                        />
+                    <Rectangle
+                        Canvas.Left="130"
+                        Canvas.Top="130"
+                        Width="50"
+                        Height="50"
+                        Fill="Black"
+                        />
+                    <Rectangle
+                        Canvas.Left="190"
+                        Canvas.Top="70"
+                        Width="50"
+                        Height="50"
+                        Fill="Yellow"
+                        />
+                    <Rectangle
+                        Canvas.Left="250"
+                        Canvas.Top="10"
+                        Width="50"
+                        Height="50"
+                        Fill="Violet"
+                        />
+                </Canvas>
+            </TabItem>
+            <!--#endregion Canvas-->
         </TabControl>
     </Grid>
 </Window>
