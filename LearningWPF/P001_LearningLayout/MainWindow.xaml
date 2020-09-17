@@ -64,33 +64,27 @@
             <!-- #region StackPanel -->
             <TabItem Header="StackPanel">
                 <StackPanel Margin="5">
-                    <Rectangle 
-                        Grid.Column="0" Grid.Row="0"
+                    <Rectangle
                         Height="25"
                         Margin="5" Fill="Red"
                         />
-                    <Rectangle 
-                        Grid.Column="1" Grid.Row="0"
+                    <Rectangle
                         Height="25"
                         Margin="5" Fill="Green"
                         />
-                    <Rectangle 
-                        Grid.Column="2" Grid.Row="0"
+                    <Rectangle
                         Height="25"
                         Margin="5" Fill="Blue"
                         />
-                    <Rectangle 
-                        Grid.Column="0" Grid.Row="1"
+                    <Rectangle
                         Height="25"
                         Margin="5" Fill="Yellow"
                         />
-                    <Rectangle 
-                        Grid.Column="1" Grid.Row="1"
+                    <Rectangle
                         Height="25"
                         Margin="5" Fill="Violet"
                         />
-                    <Rectangle 
-                        Grid.Column="2" Grid.Row="1"
+                    <Rectangle
                         Height="25"
                         Margin="5" Fill="Orange"
                         />
@@ -101,62 +95,52 @@
             <!-- #region WrapPanel -->
             <TabItem Header="WrapPanel">
                 <WrapPanel Margin="5">
-                    <Rectangle 
-                        Grid.Column="0" Grid.Row="0"
+                    <Rectangle
                         Height="50"
                         Width="50"
                         Margin="5" Fill="Red"
                         />
-                    <Rectangle 
-                        Grid.Column="1" Grid.Row="0"
+                    <Rectangle
                         Height="50"
                         Width="50"
                         Margin="5" Fill="Green"
                         />
-                    <Rectangle 
-                        Grid.Column="2" Grid.Row="0"
+                    <Rectangle
                         Height="50"
                         Width="50"
                         Margin="5" Fill="Blue"
                         />
-                    <Rectangle 
-                        Grid.Column="0" Grid.Row="1"
+                    <Rectangle
                         Height="50"
                         Width="50"
                         Margin="5" Fill="Yellow"
                         />
-                    <Rectangle 
-                        Grid.Column="1" Grid.Row="1"
+                    <Rectangle
                         Height="50"
                         Width="50"
                         Margin="5" Fill="Violet"
                         />
-                    <Rectangle 
-                        Grid.Column="2" Grid.Row="1"
+                    <Rectangle
                         Height="50"
                         Width="50"
                         Margin="5" Fill="Gray"
                         />
-                    <Rectangle 
-                        Grid.Column="2" Grid.Row="1"
+                    <Rectangle
                         Height="50"
                         Width="50"
                         Margin="5" Fill="Pink"
                         />
-                    <Rectangle 
-                        Grid.Column="2" Grid.Row="1"
+                    <Rectangle
                         Height="50"
                         Width="50"
                         Margin="5" Fill="Black"
                         />
-                    <Rectangle 
-                        Grid.Column="2" Grid.Row="1"
+                    <Rectangle
                         Height="50"
                         Width="50"
                         Margin="5" Fill="Orange"
                         />
-                    <Rectangle 
-                        Grid.Column="2" Grid.Row="1"
+                    <Rectangle
                         Height="50"
                         Width="50"
                         Margin="5" Fill="Gold"
@@ -164,6 +148,37 @@
                 </WrapPanel>
             </TabItem>
             <!-- #endregion WrapPanel-->
+            
+            <!--#region DockPanel-->
+            <TabItem Header="DockPanel">
+                <DockPanel Margin="5">
+                    <Rectangle 
+                        Height="25"
+                        DockPanel.Dock="Top"
+                        Margin="5" Fill="Red"
+                        />
+                    <Rectangle 
+                        DockPanel.Dock="Right"
+                        Width="25"
+                        Margin="5" Fill="Green"
+                        />
+                    <Rectangle 
+                        DockPanel.Dock="Left"
+                        Width="25"
+                        Margin="5" Fill="Blue"
+                        />
+                    <Rectangle 
+                        DockPanel.Dock="Bottom"
+                        Height="25"
+                        Margin="5" Fill="Green"
+                        />
+                    <Rectangle 
+                        DockPanel.Dock="Right"
+                        Margin="5" Fill="Gray"
+                        />
+                </DockPanel>
+            </TabItem>
+            <!--#endregion DockPanel-->
         </TabControl>
     </Grid>
 </Window>
