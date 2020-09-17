@@ -61,6 +61,22 @@
             </TabItem>
             <!-- #endregion Grid -->
             
+            <!--#region UniformGrid-->
+            <TabItem Header="UniformGrid">
+                <UniformGrid Margin="5" Rows="3" Columns="3">
+                    <Rectangle Margin="5" Fill="Red"/>
+                    <Rectangle Margin="5" Fill="Green"/>
+                    <Rectangle Margin="5" Fill="Blue"/>
+                    <Rectangle Margin="5" Fill="Gray"/>
+                    <Rectangle Margin="5" Fill="Yellow"/>
+                    <Rectangle Margin="5" Fill="Violet"/>
+                    <Rectangle Margin="5" Fill="Orange"/>
+                    <Rectangle Margin="5" Fill="Brown"/>
+                    <Rectangle Margin="5" Fill="Gold"/>
+                </UniformGrid>
+            </TabItem>
+            <!--#endregion UniformGrid-->
+            
             <!-- #region StackPanel -->
             <TabItem Header="StackPanel">
                 <StackPanel Margin="5">
