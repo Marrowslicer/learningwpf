@@ -4,7 +4,6 @@
         Title="Learning Layout"
         Height="288"
         Width="384"
-        ResizeMode="NoResize"
         WindowStartupLocation="CenterScreen">
     <Grid>
         <TabControl Margin="5">
@@ -100,6 +99,70 @@
             <!-- #endregion StackPanel -->
             
             <!-- #region WrapPanel -->
+            <TabItem Header="WrapPanel">
+                <WrapPanel Margin="5">
+                    <Rectangle 
+                        Grid.Column="0" Grid.Row="0"
+                        Height="50"
+                        Width="50"
+                        Margin="5" Fill="Red"
+                        />
+                    <Rectangle 
+                        Grid.Column="1" Grid.Row="0"
+                        Height="50"
+                        Width="50"
+                        Margin="5" Fill="Green"
+                        />
+                    <Rectangle 
+                        Grid.Column="2" Grid.Row="0"
+                        Height="50"
+                        Width="50"
+                        Margin="5" Fill="Blue"
+                        />
+                    <Rectangle 
+                        Grid.Column="0" Grid.Row="1"
+                        Height="50"
+                        Width="50"
+                        Margin="5" Fill="Yellow"
+                        />
+                    <Rectangle 
+                        Grid.Column="1" Grid.Row="1"
+                        Height="50"
+                        Width="50"
+                        Margin="5" Fill="Violet"
+                        />
+                    <Rectangle 
+                        Grid.Column="2" Grid.Row="1"
+                        Height="50"
+                        Width="50"
+                        Margin="5" Fill="Gray"
+                        />
+                    <Rectangle 
+                        Grid.Column="2" Grid.Row="1"
+                        Height="50"
+                        Width="50"
+                        Margin="5" Fill="Pink"
+                        />
+                    <Rectangle 
+                        Grid.Column="2" Grid.Row="1"
+                        Height="50"
+                        Width="50"
+                        Margin="5" Fill="Black"
+                        />
+                    <Rectangle 
+                        Grid.Column="2" Grid.Row="1"
+                        Height="50"
+                        Width="50"
+                        Margin="5" Fill="Orange"
+                        />
+                    <Rectangle 
+                        Grid.Column="2" Grid.Row="1"
+                        Height="50"
+                        Width="50"
+                        Margin="5" Fill="Gold"
+                        />
+                </WrapPanel>
+            </TabItem>
             <!-- #endregion WrapPanel-->
         </TabControl>
     </Grid>
