@@ -237,6 +237,31 @@
                 </Canvas>
             </TabItem>
             <!--#endregion Canvas-->
+            
+            <!--#region InkCanvas-->
+            <TabItem Header="InkCanvas">
+                <DockPanel Margin="5">
+                    <StackPanel DockPanel.Dock="Top" 
+                                Orientation="Horizontal">
+                        <Label Content="EditingMode:"/>
+                        <ComboBox x:Name="EditingModeComboBox"
+                                  SelectedIndex="0"
+                                  SelectionChanged="OnSelectionChanged">
+                            <ComboBoxItem Content="Ink"/>
+                            <ComboBoxItem Content="GestureOnly"/>
+                            <ComboBoxItem Content="InkAndGesture"/>
+                            <ComboBoxItem Content="EraseByStroke"/>
+                            <ComboBoxItem Content="EraseByPoint"/>
+                            <ComboBoxItem Content="Select"/>
+                            <ComboBoxItem Content="None"/>
+                        </ComboBox>
+                    </StackPanel>
+                    <InkCanvas x:Name="DrawInkCanvas">
+                        
+                    </InkCanvas>
+                </DockPanel>
+            </TabItem>
+            <!--#endregion InkCanvas-->
         </TabControl>
     </Grid>
 </Window>
