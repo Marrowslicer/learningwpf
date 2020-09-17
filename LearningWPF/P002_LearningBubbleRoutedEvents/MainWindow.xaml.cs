@@ -20,14 +20,28 @@ namespace P002_LearningBubbleRoutedEvents
     /// </summary>
     public partial class MainWindow : Window
     {
+        private int _counter;
+
         public MainWindow()
         {
             InitializeComponent();
+            _counter = 0;
         }
 
         private void OnMouseUp(object sender, MouseButtonEventArgs e)
         {
+            _counter++;
 
+            string message = $"# {_counter}:\nSender: {sender}\nSource: {e.Source}\nOriginal Source: {e.OriginalSource}";
+            MessagesListBox.Items.Add(message);
+            e.Handled = (bool)HandleCheckBox.IsChecked;
+        }
+
+        private void OnCommandButtonClick(object sender, RoutedEventArgs e)
+        {
+            _counter = 0;
+
+            MessagesListBox.Items.Clear();
         }
     }
 }

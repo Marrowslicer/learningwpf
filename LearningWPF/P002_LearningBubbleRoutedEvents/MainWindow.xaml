@@ -65,7 +65,8 @@
                     Grid.Column="1"
                     Margin="5"
                     Padding="3"
-                    HorizontalAlignment="Right">
+                    HorizontalAlignment="Right"
+                    Click="OnCommandButtonClick">
                 Clear list
             </Button>
         </Grid>
