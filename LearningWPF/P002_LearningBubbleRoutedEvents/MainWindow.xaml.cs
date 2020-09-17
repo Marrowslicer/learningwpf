@@ -24,5 +24,10 @@ namespace P002_LearningBubbleRoutedEvents
         {
             InitializeComponent();
         }
+
+        private void OnMouseUp(object sender, MouseButtonEventArgs e)
+        {
+
+        }
     }
 }

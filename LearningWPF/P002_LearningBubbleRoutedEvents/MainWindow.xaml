@@ -4,8 +4,10 @@
         Title="Learning Bubble Routed Events"
         Height="576"
         Width="384"
-        WindowStartupLocation="CenterScreen">
-    <Grid Margin="5">
+        WindowStartupLocation="CenterScreen"
+        MouseUp="OnMouseUp">
+    <Grid Margin="5"
+          MouseUp="OnMouseUp">
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="*"/>
@@ -17,13 +19,22 @@
                Background="AliceBlue"
                BorderBrush="Black"
                BorderThickness="1"
-               HorizontalAlignment="Center">
-            <StackPanel>
-                <TextBlock Margin="3">
+               HorizontalAlignment="Center"
+               MouseUp="OnMouseUp">
+            <StackPanel MouseUp="OnMouseUp">
+                <TextBlock Margin="3"
+                           MouseUp="OnMouseUp">
                     Image and picture label
                 </TextBlock>
-                <Image Source="/tux_400x400.jpg" Width="150"/>
-                <TextBlock Margin="5">
+                
+                <Image
+                    Source="/tux_400x400.jpg"
+                    Width="150"
+                    MouseUp="OnMouseUp"
+                    />
+                
+                <TextBlock Margin="5"
+                           MouseUp="OnMouseUp">
                     Courtesy of the stack panel
                 </TextBlock>
             </StackPanel>
