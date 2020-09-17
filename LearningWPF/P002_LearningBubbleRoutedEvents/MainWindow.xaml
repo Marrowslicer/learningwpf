@@ -1,12 +1,62 @@
 ﻿<Window x:Class="P002_LearningBubbleRoutedEvents.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:P002_LearningBubbleRoutedEvents"
-        mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        
+        Title="Learning Bubble Routed Events"
+        Height="576"
+        Width="384"
+        WindowStartupLocation="CenterScreen">
+    <Grid Margin="5">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <Label Grid.Row="0"
+               Margin="5"
+               Background="AliceBlue"
+               BorderBrush="Black"
+               BorderThickness="1"
+               HorizontalAlignment="Center">
+            <StackPanel>
+                <TextBlock Margin="3">
+                    Image and picture label
+                </TextBlock>
+                <Image Source="/tux_400x400.jpg" Width="150"/>
+                <TextBlock Margin="5">
+                    Courtesy of the stack panel
+                </TextBlock>
+            </StackPanel>
+        </Label>
+
+        <ListBox
+            x:Name="MessagesListBox"
+            Grid.Row="1"
+            Margin="5"
+            />
+
+        <Grid Grid.Row="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            
+            <CheckBox x:Name="HandleCheckBox"
+                      Grid.Column="0"
+                      Margin="5"
+                      Padding="3"
+                      HorizontalAlignment="Left"
+                      VerticalContentAlignment="Center">
+                Handle first event
+            </CheckBox>
+
+            <Button x:Name="CommandButton"
+                    Grid.Column="1"
+                    Margin="5"
+                    Padding="3"
+                    HorizontalAlignment="Right">
+                Clear list
+            </Button>
+        </Grid>
     </Grid>
 </Window>
