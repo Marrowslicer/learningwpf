@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "P002_LearningBubbleRoutedEv
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "P003_LearningKeyPressEvents", "P003_LearningKeyPressEvents\P003_LearningKeyPressEvents.csproj", "{51BBA740-5390-4C58-A2B1-780D70727567}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "P004_LearningDragDrop", "P004_LearningDragDrop\P004_LearningDragDrop.csproj", "{00362F6A-5B5B-4EDE-8BBC-31B64C296AFC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{51BBA740-5390-4C58-A2B1-780D70727567}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{51BBA740-5390-4C58-A2B1-780D70727567}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{51BBA740-5390-4C58-A2B1-780D70727567}.Release|Any CPU.Build.0 = Release|Any CPU
+		{00362F6A-5B5B-4EDE-8BBC-31B64C296AFC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{00362F6A-5B5B-4EDE-8BBC-31B64C296AFC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{00362F6A-5B5B-4EDE-8BBC-31B64C296AFC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{00362F6A-5B5B-4EDE-8BBC-31B64C296AFC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
