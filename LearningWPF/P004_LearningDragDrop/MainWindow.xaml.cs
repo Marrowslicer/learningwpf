@@ -24,5 +24,23 @@ namespace P004_LearningDragDrop
         {
             InitializeComponent();
         }
+
+        private void OnTargetLabelDragEnter(object sender, DragEventArgs e)
+        {
+            // Используется для поверки типа вставляемого объекта
+            if (e.Data.GetDataPresent(DataFormats.Text))
+            {
+                e.Effects = DragDropEffects.Copy;
+            }
+            else
+            {
+                e.Effects = DragDropEffects.None;
+            }
+        }
+
+        private void OnTargetLabelDrop(object sender, DragEventArgs e)
+        {
+            ((Label)sender).Content = e.Data.GetData(DataFormats.Text);
+        }
     }
 }
