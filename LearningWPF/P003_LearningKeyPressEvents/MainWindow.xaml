@@ -28,7 +28,13 @@
             <TextBox
                 x:Name="InputTextBox"
                 Grid.Column="1"
-                Margin="3"/>
+                Margin="3"
+                PreviewKeyDown="OnKeyEvent"
+                KeyDown="OnKeyEvent"
+                PreviewKeyUp="OnKeyEvent"
+                KeyUp="OnKeyEvent"
+                PreviewTextInput="OnTextInput"
+                TextChanged="OnTextChanged"/>
         </Grid>
         <!--#endregion-->
         
@@ -59,7 +65,8 @@
                 Margin="3"
                 Padding="20,3"
                 HorizontalAlignment="Right"
-                Content="Clear"/>
+                Content="Clear"
+                Click="OnButtonClick"/>
         </Grid>
         <!--#endregion-->
     </Grid>

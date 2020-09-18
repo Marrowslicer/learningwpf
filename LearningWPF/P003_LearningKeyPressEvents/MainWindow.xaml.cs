@@ -24,5 +24,33 @@ namespace P003_LearningKeyPressEvents
         {
             InitializeComponent();
         }
+
+        private void OnKeyEvent(object sender, KeyEventArgs e)
+        {
+            if ((bool)IgnoreCheckBox.IsChecked && e.IsRepeat)
+            {
+                return;
+            }
+
+            var message = $"Event: {e.RoutedEvent} Key: {e.Key}";
+            OutputListBox.Items.Add(message);
+        }
+
+        private void OnTextInput(object sender, TextCompositionEventArgs e)
+        {
+            var message = $"Event: {e.RoutedEvent} Text: {e.Text}";
+            OutputListBox.Items.Add(message);
+        }
+
+        private void OnTextChanged(object sender, TextChangedEventArgs e)
+        {
+            var message = $"Event: {e.RoutedEvent}";
+            OutputListBox.Items.Add(message);
+        }
+
+        private void OnButtonClick(object sender, RoutedEventArgs e)
+        {
+            OutputListBox.Items.Clear();
+        }
     }
 }
