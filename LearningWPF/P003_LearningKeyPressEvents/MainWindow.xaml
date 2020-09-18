@@ -1,12 +1,66 @@
 ﻿<Window x:Class="P003_LearningKeyPressEvents.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:P003_LearningKeyPressEvents"
-        mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="Learning Key Press Events"
+        Height="576"
+        Width="384"
+        WindowStartupLocation="CenterScreen">
     <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
         
+        <!--#region Input Row-->
+        <Grid Grid.Row="0"
+              Margin="3">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+
+            <TextBlock
+                Grid.Column="0"
+                Margin="3"
+                Text="Type here: "/>
+
+            <TextBox
+                x:Name="InputTextBox"
+                Grid.Column="1"
+                Margin="3"/>
+        </Grid>
+        <!--#endregion-->
+        
+        <!--#region Output Row-->
+        <ListBox
+            x:Name="OutputListBox"
+            Grid.Row="1"
+            Margin="6,0"/>
+        <!--#endregion-->
+        
+        <!--#region Command Row-->
+        <Grid Grid.Row="2"
+              Margin="3">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+
+            <CheckBox
+                x:Name="IgnoreCheckBox"
+                Grid.Column="0"
+                Margin="3"
+                VerticalAlignment="Center"
+                Content="Ignore Repeted Keys"/>
+
+            <Button
+                Grid.Column="1"
+                Margin="3"
+                Padding="20,3"
+                HorizontalAlignment="Right"
+                Content="Clear"/>
+        </Grid>
+        <!--#endregion-->
     </Grid>
 </Window>
