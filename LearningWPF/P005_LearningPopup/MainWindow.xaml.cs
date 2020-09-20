@@ -1,10 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
+using System.Windows.Controls.Primitives;
 using System.Windows.Data;
 using System.Windows.Documents;
 using System.Windows.Input;
@@ -23,6 +25,16 @@ namespace P005_LearningPopup
         public MainWindow()
         {
             InitializeComponent();
+        }
+
+        private void OnMouseEnter(object sender, MouseEventArgs e)
+        {
+            LinkPopup.IsOpen = true;
+        }
+
+        private void OnClick(object sender, RoutedEventArgs e)
+        {
+            Process.Start(((Hyperlink)sender).NavigateUri.ToString());
         }
     }
 }
