@@ -8,6 +8,7 @@
             <RowDefinition Height="Auto"/>
             <RowDefinition/>
             <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
         
         <Slider
@@ -56,6 +57,24 @@
                 Grid.Column="2"
                 Content="Large"
                 Click="OnLargeButtonClick"/>
+        </Grid>
+
+        <Grid Grid.Row="3">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+
+            <TextBlock
+                Grid.Column="0"
+                Margin="5"
+                Text="Exact FontSize:"/>
+
+            <TextBox
+                Grid.Column="1"
+                Margin="5"
+                Text="{Binding ElementName=TargetObject,
+                    Path=FontSize, Mode=TwoWay}"/>
         </Grid>
     </Grid>
 </Window>
