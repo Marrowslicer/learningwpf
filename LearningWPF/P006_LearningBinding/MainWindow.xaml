@@ -74,7 +74,8 @@
                 Grid.Column="1"
                 Margin="5"
                 Text="{Binding ElementName=TargetObject,
-                    Path=FontSize, Mode=TwoWay}"/>
+                    Path=FontSize, Mode=TwoWay,
+                    UpdateSourceTrigger=PropertyChanged}"/>
         </Grid>
     </Grid>
 </Window>
