@@ -24,5 +24,20 @@ namespace P006_LearningBinding
         {
             InitializeComponent();
         }
+
+        private void OnSmallButtonClick(object sender, RoutedEventArgs e)
+        {
+            TargetObject.FontSize = 12;
+        }
+
+        private void OnMiddleButtonClick(object sender, RoutedEventArgs e)
+        {
+            TargetObject.FontSize = 24;
+        }
+
+        private void OnLargeButtonClick(object sender, RoutedEventArgs e)
+        {
+            TargetObject.FontSize = 48;
+        }
     }
 }

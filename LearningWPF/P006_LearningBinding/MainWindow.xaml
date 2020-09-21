@@ -7,10 +7,11 @@
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
             <RowDefinition/>
+            <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
         
         <Slider
-            x:Name="FontSlider"
+            x:Name="SourceObject"
             Grid.Row="0"
             Margin="5"
             Minimum="1"
@@ -20,10 +21,41 @@
             TickFrequency="1"/>
 
         <TextBlock
+            x:Name="TargetObject"
             Grid.Row="1"
             Margin="5"
             Text="Some Text"
-            FontSize="{Binding ElementName=FontSlider, Path=Value}"
+            FontSize="{Binding ElementName=SourceObject,
+                Path=Value, Mode=TwoWay}"
             />
+
+        <Grid Grid.Row="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+
+            <Button
+                Margin="5"
+                x:Name="SmallButton"
+                Grid.Column="0"
+                Content="Small"
+                Click="OnSmallButtonClick"/>
+
+            <Button
+                Margin="5"
+                x:Name="MiddleButton"
+                Grid.Column="1"
+                Content="Middle"
+                Click="OnMiddleButtonClick"/>
+
+            <Button
+                Margin="5"
+                x:Name="LargeButton"
+                Grid.Column="2"
+                Content="Large"
+                Click="OnLargeButtonClick"/>
+        </Grid>
     </Grid>
 </Window>
