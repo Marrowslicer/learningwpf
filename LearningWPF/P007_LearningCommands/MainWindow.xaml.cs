@@ -20,54 +20,57 @@ namespace P007_LearningCommands
     /// </summary>
     public partial class MainWindow : Window
     {
+        private bool isDirty;
+
         public MainWindow()
         {
             InitializeComponent();
+            isDirty = false;
         }
 
         private void CanExecuteNewCommand(object sender, CanExecuteRoutedEventArgs e)
         {
-
+            e.CanExecute = true;
         }
 
         private void ExecuteNewCommand(object sender, ExecutedRoutedEventArgs e)
         {
-
+            // Код создания нового файла
         }
 
         private void CanExecuteOpenCommand(object sender, CanExecuteRoutedEventArgs e)
         {
-
+            e.CanExecute = true;
         }
 
         private void ExecuteOpenCommand(object sender, ExecutedRoutedEventArgs e)
         {
-
+            // Код открытия существующего файла
         }
 
         private void CanExecuteSaveCommand(object sender, CanExecuteRoutedEventArgs e)
         {
-
+            e.CanExecute = isDirty;
         }
 
         private void ExecuteSaveCommand(object sender, ExecutedRoutedEventArgs e)
         {
-
+            isDirty = false;
         }
 
         private void CanExecuteCloseCommand(object sender, CanExecuteRoutedEventArgs e)
         {
-
+            e.CanExecute = !isDirty;
         }
 
         private void ExecuteCloseCommand(object sender, ExecutedRoutedEventArgs e)
         {
-
+            Application.Current.MainWindow.Close();
         }
 
         private void OnTextChanged(object sender, TextChangedEventArgs e)
         {
-
+            isDirty = true;
         }
     }
 }
