@@ -15,6 +15,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "P005_LearningPopup", "P005_
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "P006_LearningBinding", "P006_LearningBinding\P006_LearningBinding.csproj", "{DC800245-3033-4040-8B27-E75D9A5EE7F5}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "P007_LearningCommands", "P007_LearningCommands\P007_LearningCommands.csproj", "{4CD12F20-7832-4185-BB8F-1BB50CE1B800}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -45,6 +47,10 @@ Global
 		{DC800245-3033-4040-8B27-E75D9A5EE7F5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DC800245-3033-4040-8B27-E75D9A5EE7F5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DC800245-3033-4040-8B27-E75D9A5EE7F5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4CD12F20-7832-4185-BB8F-1BB50CE1B800}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4CD12F20-7832-4185-BB8F-1BB50CE1B800}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4CD12F20-7832-4185-BB8F-1BB50CE1B800}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4CD12F20-7832-4185-BB8F-1BB50CE1B800}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

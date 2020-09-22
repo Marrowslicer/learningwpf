@@ -24,5 +24,50 @@ namespace P007_LearningCommands
         {
             InitializeComponent();
         }
+
+        private void CanExecuteNewCommand(object sender, CanExecuteRoutedEventArgs e)
+        {
+
+        }
+
+        private void ExecuteNewCommand(object sender, ExecutedRoutedEventArgs e)
+        {
+
+        }
+
+        private void CanExecuteOpenCommand(object sender, CanExecuteRoutedEventArgs e)
+        {
+
+        }
+
+        private void ExecuteOpenCommand(object sender, ExecutedRoutedEventArgs e)
+        {
+
+        }
+
+        private void CanExecuteSaveCommand(object sender, CanExecuteRoutedEventArgs e)
+        {
+
+        }
+
+        private void ExecuteSaveCommand(object sender, ExecutedRoutedEventArgs e)
+        {
+
+        }
+
+        private void CanExecuteCloseCommand(object sender, CanExecuteRoutedEventArgs e)
+        {
+
+        }
+
+        private void ExecuteCloseCommand(object sender, ExecutedRoutedEventArgs e)
+        {
+
+        }
+
+        private void OnTextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
     }
 }
