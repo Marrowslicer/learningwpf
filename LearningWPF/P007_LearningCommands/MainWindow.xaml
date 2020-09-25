@@ -32,7 +32,7 @@
             <RowDefinition/>
         </Grid.RowDefinitions>
 
-        <!--#region MainMenu-->
+        <!--#region Menu-->
         
         <Menu Grid.Row="0">
             <MenuItem Header="File">
