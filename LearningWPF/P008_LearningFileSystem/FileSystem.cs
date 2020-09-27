@@ -1,5 +1,7 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 
 namespace P008_LearningFileSystem
 {
@@ -118,6 +120,35 @@ namespace P008_LearningFileSystem
 
         public void MergeDirectories(string sourcePath, string destinationPath)
         {
+            DeleteExceptFiles(sourcePath, destinationPath);
+            CopyDirectory(sourcePath, destinationPath, true);
+        }
+
+        private void DeleteExceptFiles(string sourcePath, string destinationPath)
+        {
+            var exceptFiles = GetExceptFiles(sourcePath, destinationPath);
+            DeleteExceptFiles(exceptFiles);
+        }
+
+        private void DeleteExceptFiles(IEnumerable<FileInfo> exceptFiles)
+        {
+            var exceptFileList = exceptFiles.ToList();
+
+            foreach (var file in exceptFileList)
+            {
+                try
+                {
+                    DeleteFile(file.FullName);
+                }
+                catch (Exception)
+                {
+                    throw;
+                }
+            }
+        }
+
+        private IEnumerable<FileInfo> GetExceptFiles(string sourcePath, string destinationPath)
+        {
             var sourceDirectory = new DirectoryInfo(sourcePath);
 
             if (!sourceDirectory.Exists)
@@ -138,6 +169,9 @@ namespace P008_LearningFileSystem
 
             var sourceFiles = sourceDirectory.GetFiles();
             var destinationFiles = destinationDirectory.GetFiles();
+            var exceptFiles = destinationFiles.Where(df => !sourceFiles.Select(sf => sf.Name).Contains(df.Name));
+
+            return exceptFiles;
         }
 
         public void MoveDirectory(string sourceDirectoryName, string destinationDirectoryName)
