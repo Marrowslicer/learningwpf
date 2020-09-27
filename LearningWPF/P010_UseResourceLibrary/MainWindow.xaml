@@ -1,0 +1,33 @@
+﻿<Window x:Class="P010_UseResourceLibrary.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:resources="clr-namespace:P009_ResourceLibrary;assembly=P009_ResourceLibrary"
+        Title="Use ResourceLibrary"
+        Height="288"
+        Width="384"
+        WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        
+        <Button Grid.Column="0"
+                Margin="10"
+                Content="Red button"
+                FontSize="18"
+                FontWeight="Bold"
+                Foreground="White"
+                Background="{DynamicResource
+            {x:Static resources:CustomResources.RedSolidBrush}}"/>
+
+        <Button Grid.Column="1"
+                Margin="10"
+                Content="Green button"
+                FontSize="18"
+                FontWeight="Bold"
+                Foreground="White"
+                Background="{DynamicResource
+            {x:Static resources:CustomResources.GreenSolidBrush}}"/>
+    </Grid>
+</Window>
