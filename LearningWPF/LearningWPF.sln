@@ -19,6 +19,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "P007_LearningCommands", "P0
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "P008_LearningFileSystem", "P008_LearningFileSystem\P008_LearningFileSystem.csproj", "{509768EF-AA4D-4379-94D3-A0E3285333AF}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "P009_ResourceLibrary", "P009_ResourceLibrary\P009_ResourceLibrary.csproj", "{FFA0EEC9-CE30-4F28-B5AF-08855C659C25}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -57,6 +59,10 @@ Global
 		{509768EF-AA4D-4379-94D3-A0E3285333AF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{509768EF-AA4D-4379-94D3-A0E3285333AF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{509768EF-AA4D-4379-94D3-A0E3285333AF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FFA0EEC9-CE30-4F28-B5AF-08855C659C25}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FFA0EEC9-CE30-4F28-B5AF-08855C659C25}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FFA0EEC9-CE30-4F28-B5AF-08855C659C25}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FFA0EEC9-CE30-4F28-B5AF-08855C659C25}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
