@@ -1,12 +1,66 @@
 ﻿<Window x:Class="P008_LearningFileSystem.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:P008_LearningFileSystem"
-        mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        
+        Title="Learning FileSystem"
+        Height="168"
+        Width="384"
+        WindowStartupLocation="CenterScreen">
+    <Grid Margin="5"  Grid.IsSharedSizeScope="True">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+        <Grid Grid.Row="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto" SharedSizeGroup="LabelColumn"/>
+                <ColumnDefinition/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+
+            <TextBlock Grid.Column="0"
+                       Margin="5"
+                       VerticalAlignment="Center"
+                       Text="Source folder:"/>
+            <TextBox x:Name="SourceTextBox"
+                     Grid.Column="1"
+                     Margin="5,5,0,5"
+                     VerticalContentAlignment="Center"/>
+            <Button Grid.Column="2"
+                    Margin="0,5,5,5"
+                    Padding="12,3"
+                    Content="Browse"
+                    Tag="Source"
+                    Click="OnBrowseButtonClick"/>
+        </Grid>
+
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto" SharedSizeGroup="LabelColumn"/>
+                <ColumnDefinition/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+
+            <TextBlock Grid.Column="0"
+                       Margin="5"
+                       VerticalAlignment="Center"
+                       Text="Target folder:"/>
+            <TextBox x:Name="TargetTextBox"
+                     Grid.Column="1"
+                     Margin="5,5,0,5"
+                     VerticalContentAlignment="Center"/>
+            <Button Grid.Column="2"
+                    Margin="0,5,5,5"
+                    Padding="12,3"
+                    Content="Browse"
+                    Tag="Target"
+                    Click="OnBrowseButtonClick"/>
+        </Grid>
+
+        <Button Grid.Row="2"
+                Content="Merge folders"
+                Margin="5"
+                Click="OnMergeButtonClick"/>
     </Grid>
 </Window>

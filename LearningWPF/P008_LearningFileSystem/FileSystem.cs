@@ -25,7 +25,7 @@ namespace P008_LearningFileSystem
             foreach (var file in files)
             {
                 var tempPath = Path.Combine(destinationDirectoryName, file.Name);
-                file.CopyTo(tempPath, false);
+                file.CopyTo(tempPath, true);
             }
 
             if (recursive)
@@ -167,8 +167,8 @@ namespace P008_LearningFileSystem
                     .Args(destinationPath));
             }
 
-            var sourceFiles = sourceDirectory.GetFiles();
-            var destinationFiles = destinationDirectory.GetFiles();
+            var sourceFiles = sourceDirectory.GetFiles("*.*", SearchOption.AllDirectories);
+            var destinationFiles = destinationDirectory.GetFiles("*.*", SearchOption.AllDirectories);
             var exceptFiles = destinationFiles.Where(df => !sourceFiles.Select(sf => sf.Name).Contains(df.Name));
 
             return exceptFiles;
