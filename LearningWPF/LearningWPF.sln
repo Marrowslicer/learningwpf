@@ -23,6 +23,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "P009_ResourceLibrary", "P00
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "P010_UseResourceLibrary", "P010_UseResourceLibrary\P010_UseResourceLibrary.csproj", "{8C231E61-1E5F-4884-81FB-7FEEAFA497E0}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "P011_LearningRectangleShape", "P011_LearningRectangleShape\P011_LearningRectangleShape.csproj", "{4D3FDDC5-7851-4434-AEA8-0D3ECB023C3D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -69,6 +71,10 @@ Global
 		{8C231E61-1E5F-4884-81FB-7FEEAFA497E0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8C231E61-1E5F-4884-81FB-7FEEAFA497E0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8C231E61-1E5F-4884-81FB-7FEEAFA497E0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4D3FDDC5-7851-4434-AEA8-0D3ECB023C3D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4D3FDDC5-7851-4434-AEA8-0D3ECB023C3D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4D3FDDC5-7851-4434-AEA8-0D3ECB023C3D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4D3FDDC5-7851-4434-AEA8-0D3ECB023C3D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
