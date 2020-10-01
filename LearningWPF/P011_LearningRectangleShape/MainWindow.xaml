@@ -7,8 +7,7 @@
         WindowStartupLocation="CenterScreen">
     <Window.Resources>
         <Style x:Key="TitleStyle" TargetType="{x:Type TextBlock}">
-            <Setter Property="FontFamily" Value="Times New Roman"/>
-            <Setter Property="FontWeight" Value="Bold"/>
+            <Setter Property="FontFamily" Value="{DynamicResource {x:Static SystemFonts.CaptionFontFamily}}"/>            <Setter Property="FontWeight" Value="Bold"/>
             <Setter Property="FontSize" Value="24"/>
             <Setter Property="HorizontalAlignment" Value="Center"/>
             <Setter Property="Margin" Value="5"/>
@@ -39,10 +38,13 @@
             Style="{StaticResource TitleStyle}"/>
         
         <!--#region Properties-->
-        <Grid Grid.IsSharedSizeScope="True"
+        <Grid
+            Grid.IsSharedSizeScope="True"
             Grid.Column="0"
             Grid.Row="1">
             <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
                 <RowDefinition Height="Auto"/>
                 <RowDefinition Height="Auto"/>
                 <RowDefinition Height="Auto"/>
@@ -140,6 +142,68 @@
                         Mode=TwoWay,
                         UpdateSourceTrigger=PropertyChanged}"/>
             </Grid>
+
+            <Grid
+                Grid.Row="3"
+                Margin="10">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto" SharedSizeGroup="LabelGroup"/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition Width="50"/>
+                </Grid.ColumnDefinitions>
+
+                <TextBlock
+                    Grid.Column="0"
+                    Margin="5"
+                    VerticalAlignment="Center"
+                    Text="RadiusX"/>
+                <Slider
+                    x:Name="RadiusXSlider"
+                    Grid.Column="1"
+                    Margin="5"
+                    Minimum="1"
+                    Maximum="150"
+                    Value="5"/>
+                <TextBox
+                    Grid.Column="2"
+                    Margin="5"
+                    Text="{Binding
+                        ElementName=RadiusXSlider,
+                        Path=Value,
+                        Mode=TwoWay,
+                        UpdateSourceTrigger=PropertyChanged}"/>
+            </Grid>
+
+            <Grid
+                Grid.Row="4"
+                Margin="10">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto" SharedSizeGroup="LabelGroup"/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition Width="50"/>
+                </Grid.ColumnDefinitions>
+
+                <TextBlock
+                    Grid.Column="0"
+                    Margin="5"
+                    VerticalAlignment="Center"
+                    Text="RadiusY"/>
+                <Slider
+                    x:Name="RadiusYSlider"
+                    Grid.Column="1"
+                    Margin="5"
+                    Minimum="1"
+                    Maximum="150"
+                    Value="5"/>
+                <TextBox
+                    Grid.Column="2"
+                    Margin="5"
+                    Text="{Binding
+                        ElementName=RadiusYSlider,
+                        Path=Value,
+                        Mode=TwoWay,
+                        UpdateSourceTrigger=PropertyChanged}"/>
+            </Grid>
         </Grid>  
         <!--#endregion-->
 
@@ -160,6 +224,14 @@
                 Stroke="Blue"
                 StrokeThickness="{Binding
                     ElementName=StrokeThicknessSlider,
+                    Path=Value,
+                    UpdateSourceTrigger=PropertyChanged}"
+                RadiusX="{Binding
+                    ElementName=RadiusXSlider,
+                    Path=Value,
+                    UpdateSourceTrigger=PropertyChanged}"
+                RadiusY="{Binding
+                    ElementName=RadiusYSlider,
                     Path=Value,
                     UpdateSourceTrigger=PropertyChanged}"
                 Fill="Yellow"/>
